@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/write.css">
+</head>
+
+<body>
+    <div style="width: 100%;height: 80px; display: flex;justify-content: space-between;">
+        <input type="text" class="title" placeholder="请输入标题">
+        
+        <button class="publish">发布</button>
+
+    </div>
+    <div id="editor—wrapper">
+        <div id="toolbar-container"><!-- 工具栏 --></div>
+        <div id="editor-container"><!-- 编辑器 --></div>
+    </div>
+    <div>
+        标签
+        <textarea></textarea>
+    </div>
+    <div>
+        分类
+        <select style="width: 150px;height: 30px;" id="category">
+            <option value="后端">后端</option>
+            <option value="前端">前端</option>
+            <option value="Android">Android</option>
+            <option value="iOS">iOS</option>
+            <option value="人工智能">人工智能</option>
+            <option value="开发工具">开发工具</option>
+            <option value="代码人生">代码人生</option>
+            <option value="阅读">阅读</option>
+        </select>
+    </div>
+    <div>
+        专栏
+        <select style="width: 150px;height: 30px;" class="column">
+        </select>
+    </div>
+    <div>
+        选择封面
+        <input type="file" id="cover">
+    </div>
+    <script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
+    <script src="../static/js/write4.js"></script>
+</body>
+
+</html>

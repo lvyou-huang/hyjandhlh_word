@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.class_head {
+    margin: 75px auto 0px;
+    width: 1000px;
+    height: 200px;
+    background-color: #fff;
+    position: relative;
+
+}
+
+.class_head img {
+    position: absolute;
+    width: 130px;
+    height: 180px;
+    background-color: antiquewhite;
+    top: 10px;
+    left: 15px;
+}
+
+.class_head h1 {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+}
+
+.class_head span {
+    position: absolute;
+    top: 70px;
+    left: 200px;
+}
+
+.class_head button:nth-of-type(1) {
+    position: absolute;
+    left: 200px;
+    bottom: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(75, 166, 205);
+    border: 0px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+.class_head button:nth-of-type(2) {
+    position: absolute;
+    left: 360px;
+    bottom: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(86, 182, 150);
+    border: 0px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+.class_head button:nth-of-type(1):hover {
+    cursor: pointer;
+    background-color: rgb(60, 128, 157);
+}
+
+.class_head button:nth-of-type(2):hover {
+    cursor: pointer;
+    background-color: rgb(66, 117, 116);
+}
+
+.class_introduce {
+    width: 1000px;
+    margin: 20px auto 0px;
+    background-color: #fff;
+}
+
+.class_introduce>div {
+    width: 1000px;
+    height: 60px;
+    display: flex;
+    border-bottom: 0.1px solid gray;
+}
+
+.class_introduce>div span {
+    margin: 10px 40px;
+    font-size: 20px;
+   font-weight: 500px;
+}
+.class_introduce>div span:hover{
+    cursor: pointer;
+    color: rgb(64, 146, 185);
+}
+.class_introduce>span {
+    width: 900px;
+    margin: 30px;
+    display: block;
+    font-size: 18px;
+    text-indent: 2em;
+}

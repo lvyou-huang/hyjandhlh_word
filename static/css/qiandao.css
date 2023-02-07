@@ -1,0 +1,45 @@
+body {
+    background-color: #f7f7f7;
+}
+
+div {
+    width: 1000px;
+    height: 600px;
+    margin: 40px auto;
+    position: relative;
+    background-color: #fff;
+}
+
+h1 {
+    position: absolute;
+    width: 1000px;
+    text-align: center;
+    top: 40px;
+    font-size: 40px;
+}
+span{
+    position: absolute;
+    width: 1000px;
+    text-align: center;
+    top: 160px;
+    font-size: 20px;
+}
+button{
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: white;
+    border: 0px;
+    border-radius: 2px;
+    background-color: rgb(149, 206, 241);
+    left: 50%;
+    margin-left: -80px;
+    top: 260px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(51, 122, 185);
+}

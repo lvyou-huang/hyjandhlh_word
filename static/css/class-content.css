@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+div {
+    width: 1000px;
+    position: relative;
+    background-color: #fff;
+    margin: 40px auto;
+   
+}
+
+h1 {
+    position: absolute;
+    top: 40px;
+    width: 1000px;
+    text-align: center;
+    font-size: 30px;
+}
+
+span {
+    position: absolute;  
+    width: 800px;       
+    text-indent: 2em;   
+}
+
+button {
+    position: absolute;
+    width: 160px;
+    height: 60px;
+    top: 360px;
+    left: 420px;
+    border: 0px;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 18px;
+    background-color: rgb(77, 153, 215);
+}
+
+button:hover {
+    cursor: pointer ;
+    background-color: rgb(20, 97, 160)
+
+
+}

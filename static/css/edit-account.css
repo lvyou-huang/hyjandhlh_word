@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.ret {
+    width: 1200px;
+    height: 60px;
+    margin: 80px auto 0px;
+    background-color: #fff;
+    color: gray;
+    line-height: 60px;
+}
+
+.ret:hover {
+    cursor: pointer;
+    color: rgb(96, 172, 220);
+}
+
+.ifm {
+    width: 1200px;
+    height: 600px;
+    margin: 15px auto 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side {
+    width: 250px;
+    height: 600px;
+    background-color: #fff;
+}
+.side:hover{
+    cursor: pointer;
+}
+.side ul li {
+    width: 235px;
+    height: 45px;
+    margin: 5px auto;
+    background-color: #fff;
+    list-style: none;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 2px;
+}
+
+.side ul li:hover {
+    background-color: rgb(195, 229, 245);
+    color: rgb(46, 139, 201);
+}
+
+.gerenziliao {
+    width: 930px;
+    height: 600px;   
+    background-color: #fff;
+}
+.xinxi{
+    float: left;
+    width: 650px;
+    height: 600px;
+}
+.fom div{
+    width: 600px;
+    height: 80px;
+    text-indent: 2em;
+    line-height: 80px;
+    font-size: 20px;
+    border-bottom: 1px;
+}
+input[type=text]{
+    width: 450px;
+    height: 40px;
+    margin-left: 30px;
+    border: 1px solid rgb(61, 63, 64);
+}
+button{
+    display:block;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(68, 127, 246);
+    margin-left: 120px;
+    font-size: 18px;
+    color: white;
+    border: 0px;
+}

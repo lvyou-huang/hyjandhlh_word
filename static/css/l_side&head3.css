@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body {
+    background-color: #f7f7f7;
+}
+
+.create-center {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, .3);
+}
+
+.create-center img {
+    width: 120px;
+    height: 35px;
+    margin-left: 60px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.create-center img:hover {
+    cursor: pointer;
+}
+
+.fir {
+    color: rgb(8, 91, 147);
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    text-indent: 1em;
+}
+
+.create-center .touxiang {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 10px 25px 0px;
+}
+
+.touxiang:hover {
+    cursor: pointer;
+}
+
+.l-side {
+    width: 250px;
+    height: 800px;
+    background-color: #fff;
+}
+
+.l_side_name {
+    width: 70%;
+    height: 70px;
+    font-size: 18px;
+    position: absolute;
+    left: 100px;
+    top: 30px;
+}
+
+.l_side_name,
+.l_side_photo:hover {
+    cursor: pointer;
+}
+
+.l_side_write {
+    width: 210px;
+    height: 40px;
+    margin: 10px auto;
+    background-color: rgb(55, 180, 226);
+    color: white;
+    line-height: 40px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.l_side_write:hover {
+    cursor: pointer;
+}
+
+.l-side img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+
+.l-side ul li {
+    list-style: none;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 60px;
+    font-family: 'icomoon';
+    font-weight: 300;
+    margin-left: 20px;
+    text-indent: 2em;
+}
+
+.l-side a {
+    display: block;
+    color: black;
+    background-color: #fff;
+}
+
+.l-side ul li:hover {
+    cursor: pointer;
+    background-color: rgb(183, 227, 247);
+}
+
+.l-side a:hover {
+    background-color: rgb(222, 236, 243);
+}
+
+.charge_content {
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.charge_data {
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.r-side {
+    width: 1000px;
+    height: 800px;
+    background-color: #fff;
+}

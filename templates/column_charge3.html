@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/column_charge.css">
+    <link rel="stylesheet" href="/static/css/l_side&head3.css">
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('/fonts/icomoon.eot?5yxzor');
+            src: url('/fonts/icomoon.eot?5yxzor#iefix') format('embedded-opentype'),
+                url('/fonts/icomoon.ttf?5yxzor') format('truetype'),
+                url('/fonts/icomoon.woff?5yxzor') format('woff'),
+                url('/fonts/icomoon.svg?5yxzor#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="create-center">
+        <img src="/static/jpg/xitu.png">
+        <div class="fir">创作者中心</div>
+        <div style="flex: 1;"></div>
+        <img src="/static/jpg/tubiao.png">
+        <img class="touxiang">
+    </div>
+    <div style="width: 1300px;height: 800px;margin:20px auto; display: flex;justify-content: space-between;">
+        <div class="l-side">
+            <div style="width: 100%;height: 100px; position: relative;">
+                <img class="l_side_photo">
+                <div class="l_side_name"></div>
+            </div>
+            <div class="l_side_write">写文章</div>
+            <ul>
+                <li class="creator_home">首页</li>
+                <li class="charge_content">
+                    内容管理
+                    <a href="#" class="article_charge">文章管理</a>
+                    <a href="#" class="column_charge">专栏管理</a>
+                    <a href="#" class="boil_charge">沸点管理</a>
+                </li>
+                <li class="charge_data">数据中心
+                    <a class="content_data">内容数据</a>
+                    <a class="follow_data">关注者数据</a>
+                </li>
+                <li>创作成长</li>
+                <li>活动中心</li>
+                <li>帮助中心</li>
+            </ul>
+
+        </div>
+        <div class="r-side">
+            <button>创建专栏</button>
+            <div class="column_list">
+                <div>
+                    <img>
+                    <h2>zhuanlanming</h2>
+                    <span>jieshao在做 markdown 编译相关工作时，常常会使用到正则表达式，在对特殊符号、中文等处理时，对字符编码规则产生好奇，为什么会有这样一套规范呢？带着这个问题，简单探讨下字符编码等相关问题，做了一些笔记整理。</span>
+                    <button>删除</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="create_column">
+            <h3>专栏名称</h3>
+            <textarea class="column_title"></textarea>
+            <h3>专栏简介</h3>
+            <textarea class="column_introduction"></textarea>
+            <h3>封面</h3>
+            <input type="file">
+            <button>发布</button>
+        </div>
+    </div>
+
+    <script src="/static/js/column_charge20.js"></script>
+    <script src="/static/js/l_side&head7.js"></script>
+</body>
+
+</html>

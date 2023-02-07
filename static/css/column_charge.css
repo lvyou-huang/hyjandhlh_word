@@ -1,0 +1,124 @@
+.bg {
+    width: 100%;
+    height: 1000px;
+    background: rgb(75, 81, 99, 0.3);
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+body {
+    position: relative;
+}
+
+.r-side button {
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgb(122, 175, 236);
+    color: white;
+    border: 0px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.r-side button:hover {
+    cursor: pointer;
+}
+
+.column_list {
+    width: 100%;
+    border-top: 0.4px solid gray;
+    background-color: #fff;
+}
+
+.create_column {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    top: 200px;
+    left: 50%;
+    margin-left: -200px;
+    background-color: rgb(249, 249, 249);
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, .3);
+}
+
+.create_column h3 {
+    margin: 6px;
+}
+
+.create_column button {
+    width: 120px;
+    height: 40px;
+    background-color: rgb(122, 175, 236);
+    margin: 6px;
+    border: 0px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: white;
+}
+
+.column_title,
+.column_introduction {
+    width: 90%;
+    height: 100px;
+}
+
+.column_list>div {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    border-bottom: 0.2px solid gray;
+}
+
+.column_list>div:hover {
+    cursor: pointer;
+}
+
+.column_list>div img {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 5px;
+    left: 5px;
+}
+
+.column_list>div h2 {
+    position: absolute;
+    top: 5px;
+    left: 120px;
+}
+
+.column_list>div span {
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    display: block;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.column_list>div button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 40px;
+    border: 0px;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(126, 200, 234);
+
+}
+.column_list>div button:hover{
+    background-color: rgb(19, 136, 245);
+}
