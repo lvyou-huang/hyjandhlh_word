@@ -33,14 +33,16 @@ li[9].onclick = function () {
     location.href = '../read'
 }
 
+
 let common_list=document.querySelector('.common_list')
 let new_list=document.querySelector('.new_list')
 let hot_list=document.querySelector('.hot_list')
 
 
 
+
 async function ask_for_data() {
-    let res = await fetch('http://localhost:8080/ios',{
+    let res = await fetch('http://localhost:8080/read',{
         method:'post',
         headers:{
             'Content-type':'application/json'
@@ -61,12 +63,13 @@ async function ask_for_data() {
         div.appendChild(span3)
         div.appendChild(h2)
         div.appendChild(img)
-        span1.innerHTML=result[i].auther;
+        span1.innerHTML=result[i].author;
         span2.innerHTML=result[i].date;
         span3.innerHTML=result[i].category;
-        h2.innerHTML=result[i].title;
+        h2.innerHTML=result[i].article_title;
         img.src=result[i].cover;
         div.id=result[i].id;
+        h2.id=result[i].id;
         div.onclick=function(e){
             location.href='../content?id='+e.target.id
         }
@@ -77,8 +80,6 @@ async function ask_for_data() {
 ask_for_data();
 
 
-
-
 new_list.onclick=async function(){
     let t=passage_content.children.length;
     for(let i=0;i<t;i++){
@@ -87,7 +88,7 @@ new_list.onclick=async function(){
     common_list.style.color='rgb(124, 121, 121)'
     hot_list.style.color='rgb(124, 121, 121)'
     new_list.style.color='rgb(79, 174, 237)'
-    let res = await fetch('http://localhost:8080/ios?status=new',{
+    let res = await fetch('http://localhost:8080/read?status=new',{
         method:'post',
         headers:{
             'Content-type':'application/json'
@@ -129,7 +130,7 @@ hot_list.onclick=async function(){
     common_list.style.color='rgb(124, 121, 121)'
     new_list.style.color='rgb(124, 121, 121)'
     hot_list.style.color='rgb(79, 174, 237)'
-    let res = await fetch('http://localhost:8080/ios?status=hot',{
+    let res = await fetch('http://localhost:8080/read?status=hot',{
         method:'post',
         headers:{
             'Content-type':'application/json'
@@ -172,7 +173,7 @@ common_list.onclick=async function(){
     hot_list.style.color='rgb(124, 121, 121)'
     new_list.style.color='rgb(124, 121, 121)'
     common_list.style.color='rgb(79, 174, 237)'
-    let res = await fetch('http://localhost:8080/ios',{
+    let res = await fetch('http://localhost:8080/read',{
         method:'post',
         headers:{
             'Content-type':'application/json'
@@ -205,3 +206,6 @@ common_list.onclick=async function(){
         }
     }
 }
+
+
+

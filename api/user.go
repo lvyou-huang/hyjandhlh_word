@@ -1542,42 +1542,32 @@ func User() {
 			log.Println(err)
 			return
 		}
-		rows, err := db.Query("select followed from attention where follow=?", user_id)
-		if err != nil {
-			log.Println(err)
-			return
-		}
+
 		articles := make([]model.Article, 0)
 
 		if status == "" {
-			for rows.Next() {
-				var author_id int
-				err = rows.Scan(&author_id)
-				if err != nil {
-					log.Println()
-				}
-				rows2, err := db.Query("select * from article where author_id =? and postorboil= 0 ", author_id)
+			rows2, err := db.Query("select * from article where author_id in (select followed from attention where follow=?) and postorboil= 0 ", user_id)
+			if err != nil {
+				log.Println(err)
+				return
+			}
+			for rows2.Next() {
+				var article model.Article
+				err = rows2.Scan(&article.Article_title, &article.Article_content, &article.Date, &article.Category, &article.Label, &article.Column, &article.Like, &article.Id, &article.Author, &article.Author_id, &article.View, &article.Postorboil, &article.Cover, &article.Comment, &article.Collection)
 				if err != nil {
 					log.Println(err)
 					return
 				}
-				for rows2.Next() {
-					var article model.Article
-					err = rows2.Scan(&article.Article_title, &article.Article_content, &article.Date, &article.Category, &article.Label, &article.Column, &article.Like, &article.Id, &article.Author, &article.Author_id, &article.View, &article.Postorboil, &article.Cover, &article.Comment, article.Collection)
-					if err != nil {
-						log.Println(err)
-						return
-					}
-					articles = append(articles, article)
-				}
+				articles = append(articles, article)
 			}
+
 		} else if status == "new" {
 
 			rows2, err := db.Query("select * from article where author_id in (select followed from attention where follow=?) and  postorboil= 0 order by date desc ", user_id)
 
 			for rows2.Next() {
 				var article model.Article
-				err = rows2.Scan(&article.Article_title, &article.Article_content, &article.Date, &article.Category, &article.Label, &article.Column, &article.Like, &article.Id, &article.Author, &article.Author_id, &article.View, &article.Postorboil, &article.Cover, &article.Comment, article.Collection)
+				err = rows2.Scan(&article.Article_title, &article.Article_content, &article.Date, &article.Category, &article.Label, &article.Column, &article.Like, &article.Id, &article.Author, &article.Author_id, &article.View, &article.Postorboil, &article.Cover, &article.Comment, &article.Collection)
 				if err != nil {
 					log.Println(err)
 					return
@@ -1588,7 +1578,7 @@ func User() {
 			rows2, err := db.Query("select * from article where author_id in (select followed from attention where follow=?)  and postorboil= 0 order by date desc ", user_id)
 			for rows2.Next() {
 				var article model.Article
-				err = rows2.Scan(&article.Article_title, &article.Article_content, &article.Date, &article.Category, &article.Label, &article.Column, &article.Like, &article.Id, &article.Author, &article.Author_id, &article.View, &article.Postorboil, &article.Cover, &article.Comment, article.Collection)
+				err = rows2.Scan(&article.Article_title, &article.Article_content, &article.Date, &article.Category, &article.Label, &article.Column, &article.Like, &article.Id, &article.Author, &article.Author_id, &article.View, &article.Postorboil, &article.Cover, &article.Comment, &article.Collection)
 				if err != nil {
 					log.Println(err)
 					return
@@ -1596,7 +1586,7 @@ func User() {
 				articles = append(articles, article)
 			}
 		}
-
+		log.Println(articles)
 		c.JSON(200, gin.H{
 			"msg": articles,
 		})

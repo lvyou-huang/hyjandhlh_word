@@ -61,10 +61,10 @@ async function ask_for_data() {
         div.appendChild(span3)
         div.appendChild(h2)
         div.appendChild(img)
-        span1.innerHTML=result[i].auther;
+        span1.innerHTML=result[i].author;
         span2.innerHTML=result[i].date;
         span3.innerHTML=result[i].category;
-        h2.innerHTML=result[i].title;
+        h2.innerHTML=result[i].article_title;
         img.src=result[i].cover;
         div.id=result[i].id;
         div.onclick=function(e){
